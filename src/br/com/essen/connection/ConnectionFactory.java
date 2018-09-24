@@ -19,6 +19,13 @@ public class ConnectionFactory {
 
 		// Variável contendo a conexão
 		Connection conexao = null;
+		
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+		}catch(Exception erro) {
+			System.out.println("Falha ao selecionar a classe "+erro.getMessage());
+		}
+		
 
 		// Tentar realizar a conexão
 		try {

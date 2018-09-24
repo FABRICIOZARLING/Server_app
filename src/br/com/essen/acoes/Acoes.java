@@ -16,7 +16,8 @@ public class Acoes {
 			GenericDao gd = new GenericDao();
 			List<Object> lista = gd.listarTabela(MesasBean.class);
 			MesasBean mb = (MesasBean)lista.get(idMesa);
-			if(mb.getUsoMesa()=="0") {
+			//msg = mb.getUsoMesa();
+			if(mb.getUsoMesa().equals("0")) {
 				msg = "livre";
 			}else {
 				msg = "ocupada";
@@ -25,6 +26,7 @@ public class Acoes {
 		}else {
 			msg = "null";
 		}
+
 		return msg;
 	}
 
